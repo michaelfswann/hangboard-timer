@@ -1,7 +1,12 @@
 console.log("And we are live!");
 
 document.getElementById("start-button").addEventListener("click", () => {
-  console.log(new Date());
+  const currentDate = new Date();
+  const newDate = new Date();
+  console.log(newDate);
+  newDate.setUTCMinutes(newDate.getUTCMinutes() + 2);
+  console.log({ currentDate, newDate });
+  // console.log(new Date());
 });
 
 // Set the date we're counting down to
