@@ -16,6 +16,7 @@
       name="input-hang-length"
       min="1"
       max="15"
+      value="5"
     />
     <br></br>
 </div>
@@ -29,11 +30,13 @@
       name="input-rest-length"
       min="1"
       max="180"
+      value="120"
+
     />
 
     <br></br>
     <label for="input-number-sets"
-      >How many sets? (between 1 and 10):</label
+      >How many sets? (between 1 and 20):</label
     >
 
     <input
@@ -41,17 +44,23 @@
       id="input-number-sets"
       name="input-number-sets"
       min="1"
-      max="10"
+      max="20"
+      value="6"
+
     />
     <br></br>
   </div>
     
     <button id="start-button">Start!</button>
     <br></br>
-    <div id="timer-display">
-        <p>Insert time here</p>
+    <div>
+        <p id="timer-display">Insert time here</p>
     </div>
 
+  </div>
+
+  <div>
+    <input id="file" type="file"></input>
   </div>
   <script src="index.js"></script>
 </body>

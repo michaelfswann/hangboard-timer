@@ -1,12 +1,36 @@
 console.log("And we are live!");
 
 document.getElementById("start-button").addEventListener("click", () => {
+  const hangingFor = document.getElementById("input-hang-length").value;
+  const restingFor = document.getElementById("input-rest-length").value;
+  const numberSets = document.getElementById("input-number-sets").value;
+
+  // create seperate dates so they are not referenceing each other
   const currentDate = new Date();
   const newDate = new Date();
-  console.log(newDate);
-  newDate.setUTCMinutes(newDate.getUTCMinutes() + 2);
-  console.log({ currentDate, newDate });
-  // console.log(new Date());
+
+  // initiate countdown to start for thirty seconds
+
+  let initialCountdown = 6;
+
+  document.getElementById("timer-display").innerText = "Countdown starting....";
+
+  function decrementInitialCountdown() {
+    if (initialCountdown > 0) {
+      initialCountdown--;
+      document.getElementById("timer-display").innerText = initialCountdown;
+    }
+  }
+
+  setInterval(decrementInitialCountdown, 1000);
+
+  // newDate.setSeconds(newDate.getSeconds() + 120);
+
+  // console logs
+  console.log({ hangingFor, restingFor, numberSets, currentDate, newDate });
+
+  let file = document.getElementById("file").value;
+  console.log({ file });
 });
 
 // Set the date we're counting down to
