@@ -14,15 +14,36 @@ class Timer {
   }
 
   decrementInitialCountdown() {
+    this.activeTimer.initialCountdown = true;
+    let timer = this.initialCountdown;
     let x = setInterval(() => {
-      if (this.initialCountdown > 0) {
-        console.log(this.initialCountdown);
-        this.initialCountdown--;
-        document.getElementById(
-          "timer-display"
-        ).innerText = this.initialCountdown;
-      } else if (this.initialCountdown < 1) {
+      if (this.activeTimer.initialCountdown && timer > 0) {
+        timer--;
+        document.getElementById("timer-display").innerText = timer;
+      } else if (timer < 1) {
         clearInterval(x);
+        this.activeTimer.initialCountdown = false;
+        if (this.numberSets > 0) {
+          this.decrementHangingTime();
+        }
+      }
+    }, 1000);
+  }
+
+  decrementHangingTime() {
+    this.activeTimer.hangingTimer = true;
+    let timer = this.hangingFor;
+    let x = setInterval(() => {
+      if (this.activeTimer.hangingTimer && timer > 0) {
+        timer--;
+        document.getElementById("timer-display").innerText = timer;
+      } else if (timer < 1) {
+        clearInterval(x);
+        this.activeTimer.hangingTimer = false;
+
+        if (this.numberSets > 0) {
+          //decrementRestingTime
+        }
       }
     }, 1000);
   }
