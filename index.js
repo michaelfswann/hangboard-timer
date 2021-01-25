@@ -1,5 +1,7 @@
 console.log("And we are live!");
 
+let running = false;
+
 class Timer {
   constructor(hanging, resting, sets) {
     this.initialCountdown = 3;
@@ -12,9 +14,11 @@ class Timer {
       hangingTimer: false,
       restingTimer: false,
     };
+    this.interval = 0;
   }
 
   initialise() {
+    // clearInterval(this.interval);
     this.workingSets = 2 * this.numberSets;
     this.decrementInitialCountdown();
   }
@@ -25,12 +29,12 @@ class Timer {
     document.getElementById("phase-display").innerText = "Get Ready";
     document.getElementById("timer-display").innerText = timer;
 
-    let x = setInterval(() => {
+    this.interval = setInterval(() => {
       if (this.activeTimer.initialCountdown && timer > 0) {
         timer--;
         document.getElementById("timer-display").innerText = timer;
       } else if (timer < 1) {
-        clearInterval(x);
+        clearInterval(this.interval);
         this.activeTimer.initialCountdown = false;
         if (this.workingSets > 0) {
           this.decrementHangingTime();
@@ -45,12 +49,12 @@ class Timer {
     document.getElementById("phase-display").innerText = "Hang";
     document.getElementById("timer-display").innerText = timer;
 
-    let x = setInterval(() => {
+    this.interval = setInterval(() => {
       if (this.activeTimer.hangingTimer && timer > 0) {
         timer--;
         document.getElementById("timer-display").innerText = timer;
       } else if (timer < 1) {
-        clearInterval(x);
+        clearInterval(this.interval);
         this.activeTimer.hangingTimer = false;
         console.log(this.workingSets);
 
@@ -71,12 +75,12 @@ class Timer {
     document.getElementById("phase-display").innerText = "Rest";
     document.getElementById("timer-display").innerText = timer;
 
-    let x = setInterval(() => {
+    this.interval = setInterval(() => {
       if (this.activeTimer.restingTimer && timer > 0) {
         timer--;
         document.getElementById("timer-display").innerText = timer;
       } else if (timer < 1) {
-        clearInterval(x);
+        clearInterval(this.interval);
         this.activeTimer.restingTimer = false;
         console.log(this.workingSets);
 
@@ -98,25 +102,32 @@ class Timer {
 // }
 
 document.getElementById("start-button").addEventListener("click", () => {
-  const hangingFor = document.getElementById("input-hang-length").value;
-  const restingFor = document.getElementById("input-rest-length").value;
-  const numberSets = document.getElementById("input-number-sets").value;
+  if (!running) {
+    running = true;
+    const hangingFor = document.getElementById("input-hang-length").value;
+    const restingFor = document.getElementById("input-rest-length").value;
+    const numberSets = document.getElementById("input-number-sets").value;
 
-  let thisSession = new Timer(hangingFor, restingFor, numberSets);
+    const thisSession = new Timer(hangingFor, restingFor, numberSets);
 
-  document.getElementById("timer-display").innerText = "Countdown starting....";
+    document.getElementById("timer-display").innerText =
+      "Countdown starting....";
 
-  thisSession.initialise();
+    clearInterval(thisSession.interval);
 
-  // newDate.setSeconds(newDate.getSeconds() + 120);
+    thisSession.initialise();
 
-  // console logs
-  console.log(thisSession);
+    // newDate.setSeconds(newDate.getSeconds() + 120);
 
-  // let file = document.getElementById("file").value;
-  // console.log({ file });
+    // console logs
+    console.log(thisSession);
+
+    // let file = document.getElementById("file").value;
+    // console.log({ file });
+  } else {
+    alert("already running: refresh page else timer will be incorrect");
+  }
 });
-
 /* 
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
