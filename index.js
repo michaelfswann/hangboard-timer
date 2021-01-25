@@ -2,10 +2,11 @@ console.log("And we are live!");
 
 class Timer {
   constructor(hanging, resting, sets) {
-    this.initialCountdown = 6;
+    this.initialCountdown = 3;
     this.hangingFor = hanging;
     this.restingFor = resting;
     this.numberSets = sets;
+    this.workingSets = 0;
     this.activeTimer = {
       initialCountdown: false,
       hangingTimer: false,
@@ -13,9 +14,17 @@ class Timer {
     };
   }
 
+  initialise() {
+    this.workingSets = 2 * this.numberSets;
+    this.decrementInitialCountdown();
+  }
+
   decrementInitialCountdown() {
     this.activeTimer.initialCountdown = true;
     let timer = this.initialCountdown;
+    document.getElementById("phase-display").innerText = "Get Ready";
+    document.getElementById("timer-display").innerText = timer;
+
     let x = setInterval(() => {
       if (this.activeTimer.initialCountdown && timer > 0) {
         timer--;
@@ -23,7 +32,7 @@ class Timer {
       } else if (timer < 1) {
         clearInterval(x);
         this.activeTimer.initialCountdown = false;
-        if (this.numberSets > 0) {
+        if (this.workingSets > 0) {
           this.decrementHangingTime();
         }
       }
@@ -33,6 +42,9 @@ class Timer {
   decrementHangingTime() {
     this.activeTimer.hangingTimer = true;
     let timer = this.hangingFor;
+    document.getElementById("phase-display").innerText = "Hang";
+    document.getElementById("timer-display").innerText = timer;
+
     let x = setInterval(() => {
       if (this.activeTimer.hangingTimer && timer > 0) {
         timer--;
@@ -40,9 +52,37 @@ class Timer {
       } else if (timer < 1) {
         clearInterval(x);
         this.activeTimer.hangingTimer = false;
+        console.log(this.workingSets);
 
-        if (this.numberSets > 0) {
-          //decrementRestingTime
+        if (this.workingSets > 0) {
+          this.workingSets--;
+          this.decrementRestingTime();
+        } else {
+          document.getElementById("phase-display").innerText = "Finished";
+          document.getElementById("timer-display").innerText = "";
+        }
+      }
+    }, 1000);
+  }
+
+  decrementRestingTime() {
+    this.activeTimer.restingTimer = true;
+    let timer = this.restingFor;
+    document.getElementById("phase-display").innerText = "Rest";
+    document.getElementById("timer-display").innerText = timer;
+
+    let x = setInterval(() => {
+      if (this.activeTimer.restingTimer && timer > 0) {
+        timer--;
+        document.getElementById("timer-display").innerText = timer;
+      } else if (timer < 1) {
+        clearInterval(x);
+        this.activeTimer.restingTimer = false;
+        console.log(this.workingSets);
+
+        if (this.workingSets > 0) {
+          this.workingSets--;
+          this.decrementHangingTime();
         }
       }
     }, 1000);
@@ -64,18 +104,17 @@ document.getElementById("start-button").addEventListener("click", () => {
 
   let thisSession = new Timer(hangingFor, restingFor, numberSets);
 
-  thisSession.activeTimer.initialCountdown = true;
   document.getElementById("timer-display").innerText = "Countdown starting....";
 
-  thisSession.decrementInitialCountdown();
+  thisSession.initialise();
 
   // newDate.setSeconds(newDate.getSeconds() + 120);
 
   // console logs
   console.log(thisSession);
 
-  let file = document.getElementById("file").value;
-  console.log({ file });
+  // let file = document.getElementById("file").value;
+  // console.log({ file });
 });
 
 /* 
