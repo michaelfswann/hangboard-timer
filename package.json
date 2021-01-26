@@ -1,0 +1,23 @@
+{
+  "name": "hangboard-timer",
+  "version": "1.0.0",
+  "description": "timer for hangboarding and building finger strength",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelfswann/fingerboard-timer.git"
+  },
+  "keywords": [
+    "finger",
+    "strength"
+  ],
+  "author": "michaelfswann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelfswann/fingerboard-timer/issues"
+  },
+  "homepage": "https://github.com/michaelfswann/fingerboard-timer#readme"
+}
