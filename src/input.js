@@ -1,20 +1,18 @@
-import React from "react";
+import React from 'react';
 
-const Input = () => {
+const Input = ({ defaultValue, name, max, min }) => {
   return (
     <div>
-      <input type="number" name="seconds"></input>
+      <p>{name}</p>
+      <input
+        type="number"
+        defaultValue={defaultValue}
+        name={name}
+        max={max}
+        min={min}
+      ></input>
     </div>
   );
 };
 
 export default Input;
-
-<input
-  type="number"
-  id="input-rest-length"
-  name="input-rest-length"
-  min="1"
-  max="180"
-  value="120"
-/>;

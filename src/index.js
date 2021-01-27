@@ -1,12 +1,12 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
-import Input from "./input";
+import Component from './component';
 
 render(
   <div className="app">
     <p>Building...</p>
-    <Input />
+    <Component />
   </div>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

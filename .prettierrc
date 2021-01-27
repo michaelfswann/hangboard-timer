@@ -14,5 +14,6 @@
         }
       }
     ],
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "singleQuote": true
   }
