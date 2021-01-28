@@ -1,4 +1,4 @@
-![12mm half-crimp](https://i.ibb.co/5GwLQ1d/20210128-164954.jpg =250x)
+![12mm half-crimp](https://i.ibb.co/5GwLQ1d/20210128-164954.jpg =250x100 )
 
 # Hangboarding Timer (under construction)
 
