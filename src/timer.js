@@ -1,25 +1,65 @@
-import React, { useEffect, useState } from 'react'
-
-const exampleInput = {rest:120, hang:5, sets:6, prep: 4}
+import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
-    const [timer, setTimer] = useState({...exampleInput, phase:1})
-    const [countdown, setCountdown] = useState(exampleInput.prep)
-    
-    useEffect( ()=>{
-    const x = setInterval(()=> {
-        if (countdown > 0) {
-        setCountdown(countdown-1)
-    } else if (timer.phase !==2) {
-        setTimer({...timer, phase: 2})
+  const [seconds, setSeconds] = useState(4);
+  const [isActive, setIsActive] = useState(false);
+  const [phase, setPhase] = useState('prep');
+  const [numSets, setNumSets] = useState(3);
+
+  function toggle() {
+    setIsActive(!isActive);
+  }
+
+  function reset() {
+    setSeconds(0);
+    setIsActive(false);
+  }
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive && seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds((seconds) => seconds - 1);
+      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
     }
+    if (
+      seconds === 0 &&
+      (phase === 'prep' || phase === 'rest') &&
+      numSets !== 0
+    ) {
+      setPhase('hang');
+      setSeconds(5);
+      setNumSets(numSets - 1);
+    }
+    if (seconds === 0 && phase === 'hang' && numSets !== 0) {
+      setPhase('rest');
+      setSeconds(3);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
 
-
-}, 1000)
-    return () => {clearInterval(x)} })
-
-
-    return (<div><p>{countdown} seconds</p></div>)
-}
+  return (
+    <div className="app">
+      <div className="time">
+        {phase} ----- {seconds}s ----- sets to go: {numSets}
+      </div>
+      <div className="row">
+        <button
+          className={`button button-primary button-primary-${
+            isActive ? 'active' : 'inactive'
+          }`}
+          onClick={toggle}
+        >
+          {isActive ? 'Pause' : 'Start'}
+        </button>
+        <button className="button" onClick={reset}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default Timer;
