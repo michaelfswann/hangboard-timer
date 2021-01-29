@@ -11,7 +11,9 @@ const Timer = () => {
   }
 
   function reset() {
-    setSeconds(0);
+    setSeconds(4);
+    setPhase('prep');
+    setNumSets(3);
     setIsActive(false);
   }
 
@@ -36,6 +38,10 @@ const Timer = () => {
     if (seconds === 0 && phase === 'hang' && numSets !== 0) {
       setPhase('rest');
       setSeconds(3);
+    }
+    if (seconds === 0 && numSets === 0) {
+      setIsActive(false);
+      setPhase('complete');
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
