@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
   const [seconds, setSeconds] = useState(prepare);
   const [isActive, setIsActive] = useState(false);
-  const [phase, setPhase] = useState('prep');
+  const [phase, setPhase] = useState('Get Ready');
   const [numSets, setNumSets] = useState(sets);
 
   function toggle() {
@@ -28,30 +28,32 @@ const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
     }
     if (
       seconds === 0 &&
-      (phase === 'prep' || phase === 'rest') &&
+      (phase === 'Get Ready' || phase === 'Rest') &&
       numSets !== 0
     ) {
-      setPhase('hang');
+      setPhase('Hang');
       setSeconds(hanging);
       setNumSets(numSets - 1);
     }
-    if (seconds === 0 && phase === 'hang' && numSets !== 0) {
-      setPhase('rest');
+    if (seconds === 0 && phase === 'Hang' && numSets !== 0) {
+      setPhase('Rest');
       setSeconds(resting);
     }
     if (seconds === 0 && numSets === 0) {
       setIsActive(false);
-      setPhase('complete');
+      setPhase('Complete');
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
   return (
-    <div className="app">
-      <div className="time">
-        {phase} ----- {seconds}s ----- sets to go: {numSets}
-      </div>
-      <div className="row">
+    <div className="timer">
+      <div className="phase-display">{phase}</div>
+      {phase !== 'Complete' && <div className="seconds-display">{seconds}</div>}
+      {phase !== 'Complete' && (
+        <div className="sets-display">Set: {numSets}</div>
+      )}
+      <div className="timer-buttons-div">
         <button
           className={`button button-primary button-primary-${
             isActive ? 'active' : 'inactive'

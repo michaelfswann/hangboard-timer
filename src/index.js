@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Component from './component';
+import Application from './application';
 //import Timer from './timer'
 
 render(
   <div className="app">
-    <Component />
+    <Application />
   </div>,
   document.getElementById('root')
 );

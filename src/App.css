@@ -1,0 +1,84 @@
+html {
+  background-image: linear-gradient(
+    to right,
+    rgb(35, 140, 158),
+    rgb(27, 104, 163)
+  );
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.application-main-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(100, 111, 107, 0.87);
+  border: solid 3px black;
+  margin: 10px;
+  padding: 10px;
+  width: 15%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+button {
+  background-color: #5f4b6344;
+  border-radius: 15px;
+  color: white;
+  padding: 0px 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  width: 50%;
+}
+input {
+  background-color: #5f4b6344;
+  border-radius: 15px;
+  color: white;
+  padding: 0px 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  width: 50%;
+}
+
+.inputs {
+  border: solid 3px black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  border-radius: 15px;
+}
+
+.init-button-div {
+  border: solid 3px black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.timer {
+  height: auto;
+  border: solid 3px black;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
