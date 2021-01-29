@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const Timer = () => {
-  const [seconds, setSeconds] = useState(4);
+const Timer = ({ prepare, hanging, resting, sets }) => {
+  const [seconds, setSeconds] = useState(prepare);
   const [isActive, setIsActive] = useState(false);
   const [phase, setPhase] = useState('prep');
-  const [numSets, setNumSets] = useState(3);
+  const [numSets, setNumSets] = useState(sets);
 
   function toggle() {
     setIsActive(!isActive);
   }
 
   function reset() {
-    setSeconds(4);
+    setSeconds(prepare);
     setPhase('prep');
     setNumSets(3);
     setIsActive(false);
@@ -32,12 +32,12 @@ const Timer = () => {
       numSets !== 0
     ) {
       setPhase('hang');
-      setSeconds(5);
+      setSeconds(hanging);
       setNumSets(numSets - 1);
     }
     if (seconds === 0 && phase === 'hang' && numSets !== 0) {
       setPhase('rest');
-      setSeconds(3);
+      setSeconds(resting);
     }
     if (seconds === 0 && numSets === 0) {
       setIsActive(false);
