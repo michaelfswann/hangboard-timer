@@ -12,7 +12,7 @@ const Component = () => {
 
   const [initialise, setInitialise] = useState(false);
 
-  function toggle() {
+  function toggleInit() {
     setInitialise(!initialise);
   }
 
@@ -46,13 +46,14 @@ const Component = () => {
         />
       )}
       <br></br>
-      {!initialise && <button onClick={toggle}>Initialise</button>}
+      {!initialise && <button onClick={toggleInit}>Initialise</button>}
       {initialise && (
         <Timer
           prepare={prepare}
           hanging={hanging}
           resting={resting}
           sets={sets}
+          toggleInit={toggleInit}
         />
       )}
     </div>

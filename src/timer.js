@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Timer = ({ prepare, hanging, resting, sets }) => {
+const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
   const [seconds, setSeconds] = useState(prepare);
   const [isActive, setIsActive] = useState(false);
   const [phase, setPhase] = useState('prep');
@@ -10,12 +10,12 @@ const Timer = ({ prepare, hanging, resting, sets }) => {
     setIsActive(!isActive);
   }
 
-  function reset() {
-    setSeconds(prepare);
-    setPhase('prep');
-    setNumSets(3);
-    setIsActive(false);
-  }
+  //   function reset() {
+  //     setSeconds(prepare);
+  //     setPhase('prep');
+  //     setNumSets(3);
+  //     setIsActive(false);
+  //   }
 
   useEffect(() => {
     let interval = null;
@@ -60,7 +60,7 @@ const Timer = ({ prepare, hanging, resting, sets }) => {
         >
           {isActive ? 'Pause' : 'Start'}
         </button>
-        <button className="button" onClick={reset}>
+        <button className="button" onClick={toggleInit}>
           Reset
         </button>
       </div>
