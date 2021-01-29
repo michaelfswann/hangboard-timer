@@ -10,15 +10,15 @@ const Component = () => {
   const [sets, setSets] = useState(6);
   const [resting, setResting] = useState(5);
 
-  const [isActive, setIsActive] = useState(false);
+  const [initialise, setInitialise] = useState(false);
 
   function toggle() {
-    setIsActive(!isActive);
+    setInitialise(!initialise);
   }
 
   return (
     <div>
-      {!isActive && (
+      {!initialise && (
         <Input
           name="Hang for:"
           max="30"
@@ -27,7 +27,7 @@ const Component = () => {
           onChange={(e) => setHanging(e.target.value)}
         />
       )}
-      {!isActive && (
+      {!initialise && (
         <Input
           name="Rest for:"
           max="180"
@@ -36,7 +36,7 @@ const Component = () => {
           onChange={(e) => setResting(e.target.value)}
         />
       )}
-      {!isActive && (
+      {!initialise && (
         <Input
           name="Number of sets:"
           max="10"
@@ -46,8 +46,8 @@ const Component = () => {
         />
       )}
       <br></br>
-      {!isActive && <button onClick={toggle}>Initialise</button>}
-      {isActive && (
+      {!initialise && <button onClick={toggle}>Initialise</button>}
+      {initialise && (
         <Timer
           prepare={prepare}
           hanging={hanging}

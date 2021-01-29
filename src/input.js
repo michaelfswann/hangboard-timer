@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({ defaultValue, name, max, min }) => {
+const Input = ({ defaultValue, name, max, min, onChange }) => {
   return (
     <div>
       <p>{name}</p>
@@ -10,6 +10,7 @@ const Input = ({ defaultValue, name, max, min }) => {
         name={name}
         max={max}
         min={min}
+        onChange={onChange}
       ></input>
     </div>
   );
