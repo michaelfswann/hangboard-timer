@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 import './App.css';
 
 import Input from './input';
 import Timer from './timer';
+import LoginButton from './loginbutton';
+import LogoutButton from './logoutbutton';
+
+import Profile from './profile';
 
 const Application = () => {
+  const { isAuthenticated } = useAuth0();
+
   const [prepare, setPrepare] = useState(10);
   const [hanging, setHanging] = useState(5);
   const [sets, setSets] = useState(6);
@@ -19,6 +26,7 @@ const Application = () => {
 
   return (
     <div className="application-main-div">
+      {isAuthenticated && <Profile />}
       {!initialise && (
         <div className="inputs">
           <p>Please enter times in seconds.</p>
@@ -52,7 +60,6 @@ const Application = () => {
           />
         </div>
       )}
-
       {!initialise && (
         <div className="init-button-div">
           <button onClick={toggleInit}>Initialise</button>
@@ -67,6 +74,8 @@ const Application = () => {
           toggleInit={toggleInit}
         />
       )}
+      <LoginButton />
+      <LogoutButton />
     </div>
   );
 };
