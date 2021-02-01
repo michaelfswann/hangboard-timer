@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
+import useAudio from './hooks/useAudio'
+
+const url = 'https://voca.ro/1ccTGBxO7iS1'
+
 const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
   const [seconds, setSeconds] = useState(prepare);
   const [isActive, setIsActive] = useState(false);
   const [phase, setPhase] = useState('Get Ready');
   const [numSets, setNumSets] = useState(sets);
+  const [playing, toggleSound] = useAudio(url);
+
 
   function toggle() {
     setIsActive(!isActive);
