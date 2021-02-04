@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-import './application.css';
+import Input from './input';
+import Timer from './timer';
+import AuthenticationButton from './authentication-button';
+import Profile from './profile';
 
-import Input from './components/input';
-import Timer from './components/timer';
-import AuthenticationButton from './components/authentication-button';
-import Profile from './components/profile';
-
-const Application = () => {
+const Main = () => {
   const { isAuthenticated } = useAuth0();
 
   const [prepare, setPrepare] = useState(10);
@@ -77,4 +75,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default Main;

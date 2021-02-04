@@ -3,13 +3,13 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Auth0ProviderWithHistory from './auth/auth0-provider-with-history';
 
-import Application from './application';
+import App from './app';
 //import Timer from './timer'
 render(
   <Router>
     <Auth0ProviderWithHistory>
       <div className="app">
-        <Application />
+        <App />
       </div>
     </Auth0ProviderWithHistory>
   </Router>,
