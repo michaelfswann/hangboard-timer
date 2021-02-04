@@ -10,13 +10,6 @@ const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
     setIsActive(!isActive);
   }
 
-  //   function reset() {
-  //     setSeconds(prepare);
-  //     setPhase('prep');
-  //     setNumSets(3);
-  //     setIsActive(false);
-  //   }
-
   useEffect(() => {
     let interval = null;
     if (isActive && seconds > 0) {
