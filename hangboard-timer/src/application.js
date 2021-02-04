@@ -5,9 +5,8 @@ import './App.css';
 
 import Input from './input';
 import Timer from './timer';
-import LoginButton from './loginbutton';
-import LogoutButton from './logoutbutton';
-
+import AuthenticationButton from './authentication-button';
+import LogoutButton from './logout-button';
 import Profile from './profile';
 
 const Application = () => {
@@ -74,7 +73,7 @@ const Application = () => {
           toggleInit={toggleInit}
         />
       )}
-      <LoginButton />
+      <AuthenticationButton />
       <LogoutButton />
     </div>
   );
