@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-import './App.css';
+import './application.css';
 
-import Input from './input';
-import Timer from './timer';
-import AuthenticationButton from './authentication-button';
-import LogoutButton from './logout-button';
-import Profile from './profile';
+import Input from './components/input';
+import Timer from './components/timer';
+import AuthenticationButton from './components/authentication-button';
+import Profile from './components/profile';
 
 const Application = () => {
   const { isAuthenticated } = useAuth0();
