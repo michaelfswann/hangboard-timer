@@ -74,7 +74,6 @@ const Application = () => {
         />
       )}
       <AuthenticationButton />
-      <LogoutButton />
     </div>
   );
 };

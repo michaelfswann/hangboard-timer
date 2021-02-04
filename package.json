@@ -1,0 +1,45 @@
+{
+  "name": "hangboard-timer",
+  "version": "1.0.0",
+  "description": "timer for hangboarding and building finger strength",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server -r dotenv/config --mode=development --open --hot",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelfswann/fingerboard-timer.git"
+  },
+  "keywords": [
+    "finger",
+    "strength"
+  ],
+  "author": "michaelfswann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelfswann/fingerboard-timer/issues"
+  },
+  "homepage": "https://github.com/michaelfswann/fingerboard-timer#readme",
+  "dependencies": {
+    "@auth0/auth0-react": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1",
+    "dotenv-webpack": "^6.0.0"
+  }
+}
