@@ -47,14 +47,16 @@ const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
         <div className="sets-display">Set: {numSets}</div>
       )}
       <div className="timer-buttons-div">
-        <button
-          className={`button button-primary button-primary-${
-            isActive ? 'active' : 'inactive'
-          }`}
-          onClick={toggle}
-        >
-          {isActive ? 'Pause' : 'Start'}
-        </button>
+        {phase !== 'Complete' && (
+          <button
+            className={`button button-primary button-primary-${
+              isActive ? 'active' : 'inactive'
+            }`}
+            onClick={toggle}
+          >
+            {isActive ? 'Pause' : 'Start'}
+          </button>
+        )}
         <button className="button" onClick={toggleInit}>
           Reset
         </button>
