@@ -13,7 +13,7 @@ const UserData = () => {
       const token = await getAccessTokenSilently();
 
       const response = await fetch(
-        `${serverUrl}/mongo/date/?email=${user.email}`,
+        `${serverUrl}/mongo/date/email?email=${user.email}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
