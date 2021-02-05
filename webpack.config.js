@@ -1,6 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 const Dotenv = require('dotenv-webpack');
 
@@ -37,8 +38,10 @@ module.exports = {
     new Dotenv(),
     new HtmlWebPackPlugin({
       template: './src/index.html'
-    })
+    }),
+    new ErrorOverlayPlugin()
   ],
+  devtool: 'cheap-module-source-map',
   entry: [
     'babel-polyfill',
     'webpack-dev-server/client?http://127.0.0.0:8080',
