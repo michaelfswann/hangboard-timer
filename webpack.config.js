@@ -40,6 +40,7 @@ module.exports = {
     })
   ],
   entry: [
+    'babel-polyfill',
     'webpack-dev-server/client?http://127.0.0.0:8080',
     'webpack/hot/only-dev-server',
     './src'

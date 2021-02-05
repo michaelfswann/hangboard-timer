@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-const Home = () => (
+import UserData from '../components/user-data';
+
+const Data = () => (
   <Fragment>
-    <div>
-      <p>Under Construction!</p>
-    </div>
+    <UserData />
   </Fragment>
 );
 
-export default Home;
+export default Data;
