@@ -3,8 +3,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 import Input from './input';
 import Timer from './timer';
-import AuthenticationButton from './authentication-button';
 import Profile from './profile';
+import SaveSession from './save-session';
 
 const Main = () => {
   const { isAuthenticated } = useAuth0();
@@ -69,6 +69,9 @@ const Main = () => {
           sets={sets}
           toggleInit={toggleInit}
         />
+      )}
+      {isAuthenticated && (
+        <SaveSession hanging={hanging} resting={resting} sets={sets} />
       )}
     </div>
   );
