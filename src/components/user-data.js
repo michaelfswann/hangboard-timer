@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useAuth0 } from '@auth0/auth0-react';
+
+import Graph from './graph';
 
 const UserData = () => {
   const [data, setData] = useState([]);
@@ -29,8 +31,17 @@ const UserData = () => {
     }
   };
 
-  return (
-    <div className="container">
+  useEffect(() => {
+    callSecureApi();
+  }, []);
+
+  return <Graph data={data} />;
+};
+
+export default UserData;
+
+{
+  /* <div className="container">
       <h1>USER DATA FROM EXTERNAL API</h1>
       <p>
         Use these buttons to call an external API. The protected API call has an
@@ -50,8 +61,5 @@ const UserData = () => {
           Get Protected Message
         </button>
       </div>
-    </div>
-  );
-};
-
-export default UserData;
+    </div> */
+}
