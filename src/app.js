@@ -4,7 +4,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 import Loading from './components/loading';
 import Home from './views/home';
+import Data from './views/data';
+
 import ProtectedRoute from './auth/protected-route';
+import NavBar from './components/navbar';
 
 import './app.css';
 
@@ -16,11 +19,13 @@ const App = () => {
   }
 
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      {/* <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/external-api" component={ExternalApi} /> */}
-    </Switch>
+    <div className="application-main-div">
+      <NavBar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <ProtectedRoute path="/data" component={Data} />
+      </Switch>
+    </div>
   );
 };
 

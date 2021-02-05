@@ -21,7 +21,7 @@ const Main = () => {
   }
 
   return (
-    <div className="application-main-div">
+    <div>
       {isAuthenticated && <Profile />}
       {!initialise && (
         <div className="inputs">
@@ -70,7 +70,6 @@ const Main = () => {
           toggleInit={toggleInit}
         />
       )}
-      <AuthenticationButton />
     </div>
   );
 };
