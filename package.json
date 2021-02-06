@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "start": "webpack-dev-server -r dotenv/config --mode=development --open --hot",
-    "build": "webpack --mode=production"
+    "build": "webpack -r dotenv/config --mode=production"
   },
   "repository": {
     "type": "git",
