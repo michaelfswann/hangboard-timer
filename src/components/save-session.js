@@ -10,12 +10,14 @@ const SaveSession = ({ hanging, sets, resting }) => {
 
   const serverUrl = process.env.REACT_APP_SERVER_URL;
 
+  const date = new Date().toISOString().split('T')[0];
+
   function onChangeMaxSession(event) {
     setMaxSession(event.target.checked);
   }
 
   function onChangeWeight(event) {
-    setWeight(event.target.value);
+    setWeight(parseInt(event.target.value));
   }
 
   async function asyncSaveSession() {
@@ -25,13 +27,13 @@ const SaveSession = ({ hanging, sets, resting }) => {
       mode: 'cors',
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${accessToken}`
-        /* Accept: 'application/json',
+        Authorization: `Bearer ${accessToken}`,
+        Accept: 'application/json',
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*' */
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
-        date_of_session: Date.now(),
+        date_of_session: date,
         user_email: user.email,
         weight_added_in_kg: weight,
         max_hang_session: true,
