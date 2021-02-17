@@ -10,8 +10,11 @@ Enter desired number of seconds to prepare, hang and rest between sets and the n
 
 ## Stack (so far)
 
+- MongoDB
+- Express
 - React.js
 - Node.js
+- Auth0
 
 ## Under construction
 
