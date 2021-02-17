@@ -54,6 +54,7 @@ input {
 }
 
 .inputs {
+  align-self: center;
   border: solid 3px black;
   margin: 5px;
   padding: 5px;
@@ -64,6 +65,7 @@ input {
 }
 
 .init-button-div {
+  align-self: center;
   border: solid 3px black;
   margin: 5px;
   padding: 5px;
@@ -97,4 +99,9 @@ a {
 .navbar-nav {
   display: flex;
   justify-content: space-evenly;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
 }

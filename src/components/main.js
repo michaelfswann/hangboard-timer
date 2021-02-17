@@ -21,7 +21,7 @@ const Main = () => {
   }
 
   return (
-    <div>
+    <div className="main-div">
       {isAuthenticated && <Profile />}
       {!initialise && (
         <div className="inputs">
