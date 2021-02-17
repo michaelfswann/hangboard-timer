@@ -21,36 +21,36 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(100, 111, 107, 0.87);
+  background-color: rgba(246, 253, 255, 0.87);
   border: solid 3px black;
   margin: 10px;
   padding: 10px;
   width: 15%;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 4px;
 }
 
 button {
   background-color: #5f4b6344;
-  border-radius: 15px;
-  color: white;
+  border-radius: 4px;
+  color: black;
   padding: 0px 10px;
   margin: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  width: 50%;
+  width: 150px;
 }
 input {
   background-color: #5f4b6344;
-  border-radius: 15px;
-  color: white;
-  padding: 0px 10px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  padding: 5px;
   margin: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  width: 50%;
+  width: 70px;
 }
 
 .inputs {
@@ -58,9 +58,9 @@ input {
   margin: 5px;
   padding: 5px;
   text-align: center;
-  color: rgb(255, 255, 255);
-  width: 80%;
-  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  width: 180px;
+  border-radius: 4px;
 }
 
 .init-button-div {
@@ -68,8 +68,8 @@ input {
   margin: 5px;
   padding: 5px;
   text-align: center;
-  width: 80%;
-  border-radius: 15px;
+  width: 180px;
+  border-radius: 4px;
 }
 
 .timer {
@@ -81,4 +81,20 @@ input {
   font-size: 24px;
   color: rgb(255, 255, 255);
   border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 150px;
+  border-radius: 4px;
+  background-color: grey;
+  color: black;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
 }
