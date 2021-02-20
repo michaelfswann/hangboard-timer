@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 const MainNav = () => (
-  <div className="navbar-nav mr-auto">
+  <div className="nav-bar-links">
     <NavLink
       to="/"
       exact

@@ -5,11 +5,9 @@ import AuthNav from './auth-nav';
 
 const NavBar = () => {
   return (
-    <div className="nav">
-      <nav>
-        <MainNav />
-        <AuthNav />
-      </nav>
+    <div className="nav-bar">
+      <MainNav />
+      <AuthNav />
     </div>
   );
 };
