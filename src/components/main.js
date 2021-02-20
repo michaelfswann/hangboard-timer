@@ -3,7 +3,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 import Input from './input';
 import Timer from './timer';
-import Profile from './profile';
 import SaveSession from './save-session';
 
 const Main = () => {
@@ -22,7 +21,6 @@ const Main = () => {
 
   return (
     <div className="main-div">
-      {isAuthenticated && <Profile />}
       {!initialise && (
         <div className="inputs">
           <p>Please enter times in seconds.</p>

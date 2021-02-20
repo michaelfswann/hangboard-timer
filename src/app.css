@@ -31,14 +31,25 @@ body {
 .nav-bar {
   position: relative;
   background-color: red;
-  height: 20%;
+  height: 160px;
   width: 100%;
 }
 
 .nav-bar-auth {
-  display: block;
+  display: flex;
   position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
   left: 85%;
+  transform: translateX(-60%);
+  padding: 10px;
+}
+
+.nav-bar-not-auth {
+  position: absolute;
+  width: 250px;
+  left: 100%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -51,9 +62,20 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  border: solid black 5px;
+}
+
 .login-button,
 .logout-button {
-  width: 150px;
+  width: 100px;
 }
 
 /* html {
