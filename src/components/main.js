@@ -22,54 +22,59 @@ const Main = () => {
   return (
     <div className="main-div">
       {!initialise && (
-        <div className="inputs">
+        <div className="initialise-div">
           <p>Please enter times in seconds.</p>
-          <Input
-            name="Preparation:"
-            max="30"
-            min="5"
-            defaultValue={prepare}
-            onChange={(e) => setPrepare(e.target.value)}
-          />
-          <Input
-            name="Hang:"
-            max="30"
-            min="1"
-            defaultValue={hanging}
-            onChange={(e) => setHanging(e.target.value)}
-          />
-          <Input
-            name="Rest:"
-            max="180"
-            min="5"
-            defaultValue={resting}
-            onChange={(e) => setResting(e.target.value)}
-          />
-          <Input
-            name="Sets:"
-            max="10"
-            min="1"
-            defaultValue={sets}
-            onChange={(e) => setSets(e.target.value)}
-          />
+          <div>
+            <Input
+              name="Preparation:"
+              max="30"
+              min="5"
+              defaultValue={prepare}
+              onChange={(e) => setPrepare(e.target.value)}
+            />
+            <Input
+              name="Hang:"
+              max="30"
+              min="1"
+              defaultValue={hanging}
+              onChange={(e) => setHanging(e.target.value)}
+            />
+            <Input
+              name="Rest:"
+              max="180"
+              min="5"
+              defaultValue={resting}
+              onChange={(e) => setResting(e.target.value)}
+            />
+            <Input
+              name="Sets:"
+              max="10"
+              min="1"
+              defaultValue={sets}
+              onChange={(e) => setSets(e.target.value)}
+            />
+          </div>
+          <div className="init-button-div">
+            <button onClick={toggleInit}>Initialise</button>
+          </div>
         </div>
       )}
-      {!initialise && (
-        <div className="init-button-div">
-          <button onClick={toggleInit}>Initialise</button>
-        </div>
-      )}
+
       {initialise && (
-        <Timer
-          prepare={prepare}
-          hanging={hanging}
-          resting={resting}
-          sets={sets}
-          toggleInit={toggleInit}
-        />
+        <div className="timer-div">
+          <Timer
+            prepare={prepare}
+            hanging={hanging}
+            resting={resting}
+            sets={sets}
+            toggleInit={toggleInit}
+          />
+        </div>
       )}
       {isAuthenticated && (
-        <SaveSession hanging={hanging} resting={resting} sets={sets} />
+        <div className="save-session-div">
+          <SaveSession hanging={hanging} resting={resting} sets={sets} />
+        </div>
       )}
     </div>
   );

@@ -16,16 +16,17 @@ body {
 }
 
 .application-main-div {
-  height: 50vh;
   background-color: royalblue;
-  width: 40vw;
+
+  width: 35vw;
   position: absolute;
-  top: 30%;
+  top: 40%;
   /* in relation to parent */
   left: 50%;
   /* in relation to parent */
   transform: translate(-50%, -50%);
   /* in relation to self */
+  box-shadow: 0 5px 10px 2px rgba(136, 136, 136, 0.809);
 }
 
 .nav-bar {
@@ -70,7 +71,7 @@ body {
 
 .profile-picture {
   border-radius: 50%;
-  border: solid black 5px;
+  border: solid black 3px;
 }
 
 .login-button,
@@ -78,6 +79,49 @@ body {
   width: 100px;
 }
 
+.initialise-div {
+  background-color: yellow;
+  display: flex;
+  height: 360px;
+
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.timer-div {
+  background-color: yellow;
+  display: flex;
+  height: 360px;
+
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.max-hang-checkbox-div {
+  padding: 10px;
+}
+
+.save-session-div {
+  background-color: green;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.save-session-button-div {
+  padding: 10px;
+}
+.init-button-div {
+  padding: 10px;
+}
 /* html {
   background-image: linear-gradient(
     to right,
