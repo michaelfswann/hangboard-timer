@@ -204,6 +204,10 @@ input {
   flex-direction: column;
 }
 
+.please-login-div {
+  text-align: center;
+}
+
 .save-session-button-div {
   display: flex;
   justify-content: center;

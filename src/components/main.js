@@ -76,6 +76,11 @@ const Main = () => {
           <SaveSession hanging={hanging} resting={resting} sets={sets} />
         </div>
       )}
+      {!isAuthenticated && (
+        <div className="please-login-div">
+          <p>Please login to see data and store sessions...</p>
+        </div>
+      )}
     </div>
   );
 };
