@@ -16,6 +16,10 @@ Enter desired number of seconds to prepare, hang and rest between sets and the n
 - Node.js
 - Auth0
 
+## Screencast
+
+<img src="https://s3-eu-west-1.amazonaws.com/mswann.dev/hangboard-timer-gif-cropped.gif" width="600" />
+
 ## Under construction
 
 When fully featured timer will have audio alerts, store progress in user accounts and show data in a graph.
