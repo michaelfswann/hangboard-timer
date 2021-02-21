@@ -1,4 +1,201 @@
-html {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000;
+  padding: 30px;
+  background-color: rgb(216, 216, 216);
+}
+
+.application-main-div {
+  background-color: royalblue;
+  height: 700px;
+
+  width: 35vw;
+  position: absolute;
+  top: 40%;
+  /* in relation to parent */
+  left: 50%;
+  /* in relation to parent */
+  transform: translate(-50%, -50%);
+  /* in relation to self */
+  box-shadow: 0 5px 10px 2px rgba(136, 136, 136, 0.809);
+}
+
+.nav-bar {
+  position: relative;
+  background-color: red;
+  height: 160px;
+  width: 100%;
+}
+
+.nav-bar-auth {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 250px;
+  left: 85%;
+  transform: translateX(-70%);
+  padding: 10px;
+}
+
+.nav-bar-not-auth {
+  position: absolute;
+  width: 250px;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-bar-links {
+  display: block;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  animation-name: slideUp;
+  animation-duration: 1s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+a:visited {
+  color: #000;
+}
+
+a:link {
+  color: #000;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  border: solid black 3px;
+}
+
+.login-button,
+.logout-button {
+  width: 100px;
+}
+
+.initialise-div {
+  background-color: yellow;
+  display: flex;
+  height: 400px;
+
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.timer-div {
+  background-color: yellow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  flex-basis: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.timer {
+  background-color: purple;
+
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.phase-display {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.seconds-display {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.sets-display {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.max-hang-checkbox-div {
+  padding: 10px;
+}
+
+.save-session-div {
+  background-color: green;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.save-session-button-div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.init-button-div {
+  padding: 10px;
+}
+/* html {
   background-image: linear-gradient(
     to right,
     rgb(35, 140, 158),
@@ -104,4 +301,4 @@ a {
 .main-div {
   display: flex;
   flex-direction: column;
-}
+} */

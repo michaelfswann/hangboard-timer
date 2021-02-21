@@ -50,15 +50,17 @@ const SaveSession = ({ hanging, sets, resting }) => {
   }
   return (
     <div>
-      <div>
-        <label>Add session data max hang graph?</label>
+      <div className="max-hang-checkbox-div">
+        <label>Add session data to max hang graph?</label>
         <input type="checkbox" onChange={onChangeMaxSession}></input>
       </div>
       <div>
         <label>Weight</label>
         <input type="number" onChange={onChangeWeight}></input>
       </div>
-      <button onClick={asyncSaveSession}>Save Session!</button>
+      <div className="save-session-button-div">
+        <button onClick={asyncSaveSession}>Save Session!</button>
+      </div>
     </div>
   );
 };
