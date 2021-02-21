@@ -51,7 +51,7 @@ const SaveSession = ({ hanging, sets, resting }) => {
   return (
     <div>
       <div className="max-hang-checkbox-div">
-        <label>Add session data max hang graph?</label>
+        <label>Add session data to max hang graph?</label>
         <input type="checkbox" onChange={onChangeMaxSession}></input>
       </div>
       <div>
