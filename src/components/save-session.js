@@ -55,7 +55,7 @@ const SaveSession = ({ hanging, sets, resting }) => {
         <input type="checkbox" onChange={onChangeMaxSession}></input>
       </div>
       <div>
-        <label>Weight</label>
+        <label>Weight (kg)</label>
         <input type="number" onChange={onChangeWeight}></input>
       </div>
       <div className="save-session-button-div">
