@@ -17,7 +17,7 @@ body {
 }
 
 .application-main-div {
-  background-color: royalblue;
+  background-color: rgb(199, 222, 226);
   height: 700px;
 
   width: 35vw;
@@ -33,7 +33,11 @@ body {
 
 .nav-bar {
   position: relative;
-  background-color: red;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(138, 223, 238),
+    rgb(74, 93, 107)
+  );
   height: 160px;
   width: 100%;
 }
@@ -112,7 +116,6 @@ a:link {
 
 .profile-picture {
   border-radius: 50%;
-  border: solid black 3px;
 }
 
 .login-button,
@@ -121,7 +124,7 @@ a:link {
 }
 
 .initialise-div {
-  background-color: yellow;
+  background-color: rgb(199, 222, 226);
   display: flex;
   height: 400px;
 
@@ -133,13 +136,19 @@ a:link {
   font-weight: 400;
 }
 
+.initialise-p {
+  padding-bottom: 15px;
+  font-style: italic;
+}
+
 input {
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .timer-div {
-  background-color: yellow;
+  background-color: rgb(199, 222, 226);
 
   display: flex;
   flex-direction: column;
@@ -152,7 +161,7 @@ input {
 }
 
 .timer {
-  background-color: purple;
+  background-color: rgb(199, 222, 226);
 
   display: flex;
 
@@ -178,9 +187,17 @@ input {
 .max-hang-checkbox-div {
   padding: 10px;
 }
+.timer-buttons-div {
+  display: inline-block;
+  padding-bottom: 10px;
+}
 
 .save-session-div {
-  background-color: green;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(138, 223, 238),
+    rgb(74, 93, 107)
+  );
   display: flex;
 
   align-items: center;
@@ -194,6 +211,13 @@ input {
 }
 .init-button-div {
   padding: 10px;
+}
+
+.graph {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 20px;
 }
 /* html {
   background-image: linear-gradient(

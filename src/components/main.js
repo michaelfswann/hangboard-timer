@@ -23,7 +23,7 @@ const Main = () => {
     <div className="main-div">
       {!initialise && (
         <div className="initialise-div">
-          <p>Please enter times in seconds.</p>
+          <p className="initialise-p">Please enter times in seconds.</p>
           <div>
             <Input
               name="Preparation:"

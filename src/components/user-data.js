@@ -35,7 +35,11 @@ const UserData = () => {
     callSecureApi();
   }, []);
 
-  return <Graph data={data} />;
+  return (
+    <div className="graph">
+      <Graph data={data} />
+    </div>
+  );
 };
 
 export default UserData;

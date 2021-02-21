@@ -29,15 +29,15 @@ const exampleData = [
 const Graph = ({ data }) => {
   return (
     <LineChart
-      width={250}
-      height={150}
+      width={500}
+      height={500}
       data={data}
       margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
     >
       <Line type="monotone" dataKey="weight_added_in_kg" stroke="#000000" />
-      <CartesianGrid stroke="#ffffff" />
+      <CartesianGrid stroke="#ffffff" strokeDasharray="5 5" />
       <XAxis dataKey="date_of_session" stroke="#000000" />
-      <YAxis label="(kg)" stroke="#000000" />
+      <YAxis label="(kg)  " stroke="#000000" />
       <Tooltip />
     </LineChart>
   );
