@@ -24,11 +24,11 @@ When fully featured timer will have audio alerts, store progress in user account
 
 At present timer is fully functioning. Users can log in with Auth0 and see stored max hang data as a graph.
 
-Still to do:
+### Still to do:
 
--Add sound
--Refine styling
--Deploy
+- Add sound
+- Refine styling
+- Deploy
 
 
 <img src="https://i.ibb.co/5GwLQ1d/20210128-164954.jpg" width="200" height="200" />
