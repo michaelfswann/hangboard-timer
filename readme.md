@@ -32,10 +32,9 @@ Server repository can be found: [here](https://github.com/michaelfswann).
 
 ## Challenges
 
-On of biggest challenges I overcame building this application were not using create-react-app writing a custom webpack config: I did this as a learning experience trying to find out more of what goes on under the hood of react.
+One of biggest challenges I overcame building this application were not using create-react-app writing a custom webpack config: I did this as a learning experience trying to find out more of what goes on under the hood of react.
 
-The second biggest challenge was deploying as a static site: I soon learnt I couldn't use the BrowserRouter and it took some research to find out more about the nature of how React works and to use the HashRouter to return fragments whilst not not navigating to static pages that did not exist e.g. "/#/data" not "/data".
-
+Another challenge was deploying as a static site: I soon learnt I couldn't use the BrowserRouter from react-router-dom and it took some research to find out more about the nature of how React works and to use the HashRouter to return fragments whilst not not navigating to static pages that did not exist e.g. "/#/data" not "/data".
 
 ## Next steps
 
