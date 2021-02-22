@@ -25,14 +25,14 @@ Login to store session data and view previous max hang data plotted on a graph (
 ## Deployment
 
 - Client is deployed on AWS S3 served by CloudFront and Route 53.
-- Server is desployed using Serverless via AWS Cloud Formation as a Lambda function.
+- Server is deployed using Serverless via AWS Cloud Formation as a Lambda function.
 - Database is running on Atlas's cloud service.
 
 Server repository can be found: [here](https://github.com/michaelfswann).
 
 ## Challenges
 
-One of biggest challenges I overcame building this application were not using create-react-app writing a custom webpack config: I did this as a learning experience trying to find out more of what goes on under the hood of react.
+One of biggest challenges I overcame building this application was not using create-react-app and writing a custom webpack config: I did this as a learning excercise trying to find out more of what goes on under the hood of React.
 
 Another challenge was deploying as a static site: I soon learnt I couldn't use the BrowserRouter from react-router-dom and it took some research to find out more about the nature of how React works and to use the HashRouter to return fragments whilst not not navigating to static pages that did not exist e.g. "/#/data" not "/data".
 
