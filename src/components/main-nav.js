@@ -1,29 +1,37 @@
-import { NavLink } from 'react-router-dom';
 import React from 'react';
 
-const MainNav = () => (
-  <div className="nav-bar-links">
-    <div className="link">
-      <NavLink
-        to="/"
-        exact
-        className="nav-link"
-        activeClassName="router-link-exact-active"
-      >
-        Timer
-      </NavLink>
+import { NavLink } from 'react-router-dom'
+
+
+import { useAuth0 } from '@auth0/auth0-react';
+
+const MainNav = () => {
+  const { isAuthenticated } = useAuth0();
+
+  return (
+    <div className="nav-bar-links">
+      <div className="link">
+        <NavLink
+          to="/"
+          
+        >
+          Timer
+        </NavLink>
+      </div>
+      {isAuthenticated && (
+        <div className="link">
+          <NavLink
+            to="/data"
+            
+            
+          >
+            Data
+          </NavLink>
+          
+        </div>
+      )}
     </div>
-    <div className="link">
-      <NavLink
-        to="/data"
-        exact
-        className="nav-link"
-        activeClassName="router-link-exact-active"
-      >
-        Data
-      </NavLink>
-    </div>
-  </div>
-);
+  );
+};
 
 export default MainNav;

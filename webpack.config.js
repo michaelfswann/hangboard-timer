@@ -42,10 +42,5 @@ module.exports = {
     new ErrorOverlayPlugin()
   ],
   devtool: 'cheap-module-source-map',
-  entry: [
-    'babel-polyfill',
-    'webpack-dev-server/client?http://127.0.0.0:8080',
-    'webpack/hot/only-dev-server',
-    './src'
-  ]
+  entry: ['babel-polyfill', './src']
 };
