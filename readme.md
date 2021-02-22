@@ -30,9 +30,8 @@ Login to store session data and view previous max hang data plotted on a graph (
 
 Server repository can be found: [here](https://github.com/michaelfswann).
 
-## Under construction
+## Next steps
 
-### Still to do:
 - Add sound
 - Refine styling
 
