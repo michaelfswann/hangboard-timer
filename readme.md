@@ -6,7 +6,7 @@
 
 Timer for hang boarding and building finger strength for climbing.
 
-Application is hosted [here](timer.mswann.dev).
+Application is hosted: [here](timer.mswann.dev).
 
 Enter desired number of seconds to prepare, hang and rest between sets and the number of sets and see a visual timer.
 
@@ -28,7 +28,7 @@ Login to store session data and view previous max hang data plotted on a graph (
 - Server is desployed using Serverless via AWS Cloud Formation as a Lambda function.
 - Database is running on Atlas's cloud service.
 
-Server repository can be found: [here]('https://github.com/michaelfswann')
+Server repository can be found: [here](https://github.com/michaelfswann).
 
 ## Under construction
 
