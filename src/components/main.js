@@ -12,12 +12,22 @@ const Main = () => {
   const [hanging, setHanging] = useState(5);
   const [sets, setSets] = useState(6);
   const [resting, setResting] = useState(120);
+  const [saved, setSaved] = useState(false)
 
   const [initialise, setInitialise] = useState(false);
+  
+  function toggleSaved() {
+    setSaved(!saved);
+  }
 
   function toggleInit() {
     setInitialise(!initialise);
+    setSaved(false)
+
+    
   }
+
+  
 
   return (
     <div className="main-div">
@@ -68,17 +78,24 @@ const Main = () => {
             resting={resting}
             sets={sets}
             toggleInit={toggleInit}
+            toggleSaved={toggleSaved}
           />
         </div>
       )}
-      {isAuthenticated && (
+      {isAuthenticated && !saved && (
         <div className="save-session-div">
-          <SaveSession hanging={hanging} resting={resting} sets={sets} />
+          <SaveSession hanging={hanging} resting={resting} sets={sets} toggleSaved={toggleSaved} />
         </div>
       )}
       {!isAuthenticated && (
         <div className="please-login-div">
           <p>Please login to see data and store sessions...</p>
+        </div>
+      )}
+
+      {isAuthenticated && saved && (
+        <div className="saved-div">
+          <p>Session saved.</p>
         </div>
       )}
     </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useAuth0 } from '@auth0/auth0-react';
 
-const SaveSession = ({ hanging, sets, resting }) => {
+const SaveSession = ({ hanging, sets, resting, toggleSaved }) => {
   const [maxSession, setMaxSession] = useState(false);
   const [weight, setWeight] = useState(0);
 
@@ -45,8 +45,10 @@ const SaveSession = ({ hanging, sets, resting }) => {
     };
 
     const response = await fetch(` ${serverUrl}/mongo`, requestOptions);
-    console.log(response);
     const data = await response.json();
+    toggleSaved()
+
+
   }
   return (
     <div>

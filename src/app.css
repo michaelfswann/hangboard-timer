@@ -16,6 +16,7 @@ body {
   background-color: rgb(216, 216, 216);
 }
 
+
 .application-main-div {
   background-color: rgb(199, 222, 226);
   height: 700px;
@@ -136,6 +137,19 @@ a:link {
   font-weight: 400;
 }
 
+.initialise-div input {
+
+   
+    width: 150px;
+    height: 25px;
+    padding: 0px;
+    font-size: 14pt;
+    border: solid 0.5px #000;
+  
+}
+
+
+
 .initialise-p {
   padding-bottom: 15px;
   font-style: italic;
@@ -205,6 +219,10 @@ input {
 }
 
 .please-login-div {
+  text-align: center;
+}
+
+.saved-div {
   text-align: center;
 }
 
