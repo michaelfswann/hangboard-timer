@@ -123,6 +123,7 @@ a:link {
 }
 
 .profile-picture {
+  display: block;
   border-radius: 50%;
 }
 
