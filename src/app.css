@@ -1,25 +1,32 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+html {
+  font-size: 62.5%
+}
 
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #000;
-  padding: 30px;
+  padding: 3rem;
   background-color: rgb(216, 216, 216);
+  box-sizing: border-box;
 }
 
 
 .application-main-div {
   background-color: rgb(199, 222, 226);
-  height: 700px;
+  height: 70rem;
 
   width: 35vw;
   position: absolute;
@@ -29,7 +36,7 @@ body {
   /* in relation to parent */
   transform: translate(-50%, -50%);
   /* in relation to self */
-  box-shadow: 0 5px 10px 2px rgba(136, 136, 136, 0.809);
+  box-shadow: 0 .5rem 1rem .2rem rgba(136, 136, 136, 0.809);
 }
 
 .nav-bar {
@@ -39,7 +46,7 @@ body {
     rgb(138, 223, 238),
     rgb(74, 93, 107)
   );
-  height: 160px;
+  height: 16rem;
   width: 100%;
 }
 
@@ -49,15 +56,15 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 250px;
+  width: 25rem;
   left: 85%;
   transform: translateX(-70%);
-  padding: 10px;
+  padding: 1rem;
 }
 
 .nav-bar-not-auth {
   position: absolute;
-  width: 250px;
+  width: 25rem;
   left: 100%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -69,13 +76,13 @@ body {
   left: 15%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 2rem;
 }
 
 .link {
   display: inline-block;
-  padding: 10px;
-  font-size: 20px;
+  padding: 1rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -121,43 +128,45 @@ a:link {
 
 .login-button,
 .logout-button {
-  width: 100px;
+  display: inline-block;
+  width: 10rem;
+  font-size: 1.4rem;
 }
 
 .initialise-div {
   background-color: rgb(199, 222, 226);
   display: flex;
-  height: 400px;
+  height: 40rem;
 
   align-items: center;
   flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  font-size: 18px;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
 .initialise-div input {
 
-   
-    width: 150px;
-    height: 25px;
-    padding: 0px;
+    display: inline-block;
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0;
     font-size: 14pt;
-    border: solid 0.5px #000;
+    border: solid .05rem #000;
   
 }
 
 
 
 .initialise-p {
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
   font-style: italic;
 }
 
 input {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 
@@ -168,10 +177,10 @@ input {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  flex-basis: 400px;
-  height: 400px;
-  margin: 10px;
-  padding: 10px;
+  flex-basis: 40rem;
+  height: 40rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .timer {
@@ -184,26 +193,26 @@ input {
 }
 
 .phase-display {
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: 600;
 }
 
 .seconds-display {
-  font-size: 96px;
+  font-size: 9.6rem;
   font-weight: 700;
 }
 
 .sets-display {
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 500;
 }
 
 .max-hang-checkbox-div {
-  padding: 10px;
+  padding: 1rem;
 }
 .timer-buttons-div {
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 .save-session-div {
@@ -229,122 +238,30 @@ input {
 .save-session-button-div {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 1rem;
 }
 .init-button-div {
-  padding: 10px;
+  padding: 1rem;
 }
 
 .graph {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  padding: 20px;
-}
-/* html {
-  background-image: linear-gradient(
-    to right,
-    rgb(35, 140, 158),
-    rgb(27, 104, 163)
-  );
+  padding: 2rem;
 }
 
-.app {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.button-timer, .button-init {
+  display: inline-block;
+  width: 9rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
-.application-main-div {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(246, 253, 255, 0.87);
-  border: solid 3px black;
-  margin: 10px;
-  padding: 10px;
-  width: 15%;
+.button-save {
+  display: inline-block;
+  width: 14rem;
+  font-size: 1.4rem;
   text-align: center;
-  border-radius: 4px;
 }
 
-button {
-  background-color: #5f4b6344;
-  border-radius: 4px;
-  color: black;
-  padding: 0px 10px;
-  margin: 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  width: 150px;
-}
-input {
-  background-color: #5f4b6344;
-  border-radius: 4px;
-  color: rgb(0, 0, 0);
-  padding: 5px;
-  margin: 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  width: 70px;
-}
-
-.inputs {
-  align-self: center;
-  border: solid 3px black;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  width: 180px;
-  border-radius: 4px;
-}
-
-.init-button-div {
-  align-self: center;
-  border: solid 3px black;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  width: 180px;
-  border-radius: 4px;
-}
-
-.timer {
-  height: auto;
-  border: solid 3px black;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  border-radius: 15px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.btn {
-  width: 150px;
-  border-radius: 4px;
-  background-color: grey;
-  color: black;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.main-div {
-  display: flex;
-  flex-direction: column;
-} */

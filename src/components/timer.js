@@ -49,15 +49,13 @@ const Timer = ({ prepare, hanging, resting, sets, toggleInit }) => {
       <div className="timer-buttons-div">
         {phase !== 'Complete' && (
           <button
-            className={`button button-primary button-primary-${
-              isActive ? 'active' : 'inactive'
-            }`}
+            className="button-timer"
             onClick={toggle}
           >
             {isActive ? 'Pause' : 'Start'}
           </button>
         )}
-        <button className="button" onClick={toggleInit}>
+        <button className="button-timer" onClick={toggleInit}>
           Reset
         </button>
       </div>

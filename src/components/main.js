@@ -65,7 +65,7 @@ const Main = () => {
             />
           </div>
           <div className="init-button-div">
-            <button onClick={toggleInit}>Initialise</button>
+            <button class="button-init" onClick={toggleInit}>Initialise</button>
           </div>
         </div>
       )}

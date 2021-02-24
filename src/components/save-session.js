@@ -61,7 +61,7 @@ const SaveSession = ({ hanging, sets, resting, toggleSaved }) => {
         <input type="number" onChange={onChangeWeight}></input>
       </div>
       <div className="save-session-button-div">
-        <button onClick={asyncSaveSession}>Save Session!</button>
+        <button className="button-save" onClick={asyncSaveSession}>Save Session!</button>
       </div>
     </div>
   );
