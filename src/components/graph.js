@@ -27,7 +27,7 @@ const exampleData = [
     weight_added_in_kg: 14
   }
 ];
-const Graph = ({ data }) => {
+const Graph = ({ data, exampleData }) => {
   return (
     <LineChart
       width={500}
