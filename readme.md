@@ -12,7 +12,7 @@ Enter desired number of seconds to prepare, hang and rest between sets and the n
 
 Login to store session data and view previous max hang data plotted on a graph (graph created using the [recharts]('recharts.org') node module).
 
-## Stack 
+## Stack
 
 - MongoDB
 - Express
