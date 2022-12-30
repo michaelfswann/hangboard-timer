@@ -10,24 +10,7 @@ import {
   Tooltip
 } from 'recharts';
 
-const exampleData = [
-  {
-    _id: '601c8f40919ee790d86524f9',
-    date_of_session: '2020-10-01',
-    weight_added_in_kg: 10
-  },
-  {
-    _id: '601c8f40919ee790d86524fb',
-    date_of_session: '2020-12-01',
-    weight_added_in_kg: 12
-  },
-  {
-    _id: '601c8f40919ee790d86524fa',
-    date_of_session: '2020-14-01',
-    weight_added_in_kg: 14
-  }
-];
-const Graph = ({ data, exampleData }) => {
+const Graph = ({ data }) => {
   return (
     <LineChart
       width={500}
