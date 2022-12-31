@@ -9,7 +9,7 @@ import Data from './views/data';
 import ProtectedRoute from './auth/protected-route';
 import NavBar from './components/navbar';
 
-import './app.css';
+// import './app.css';
 
 const App = () => {
   const { isLoading } = useAuth0();
